@@ -6,10 +6,9 @@
 ### Next up: Serve static files
 
 ### Steps:
-
-
-1. Create a "data" folder
-2. Add a dummy data json file, "users.json" to the data folder
-3. Update server.js 
-4. Run start command 
-5. View the page on a web browser
+1. Install "pug" as runtime
+2. Create a "view" folder
+3. Crate a pug file in the view folder
+4. Update the server.js to use pug engine
+5. Run start command 
+6. View the page on a web browser
