@@ -1,0 +1,9 @@
+doctype html
+html(lang='eng')
+  head
+    title User List
+  body
+    ul
+      each user in users
+        li
+          a(href='/' + user.username)= user.name.first + " " + user.name.last

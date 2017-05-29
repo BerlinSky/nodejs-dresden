@@ -15,14 +15,11 @@ fs.readFile(path.resolve(__dirname, './data/users.json'), {encoding: 'utf8'}, fu
   })
 })
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 app.get('/', function(req, res) {
-  var buffer = ''
-
-  users.forEach(function(user) {
-    buffer += `<a href="/${user.username}">${user.name.full}</a><br>`
-  })
-
-  res.send(buffer)
+  res.render('index', { users: users });
 })
 
 app.get('/:username', function(req, res) {
