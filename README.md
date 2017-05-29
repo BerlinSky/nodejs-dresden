@@ -1,6 +1,8 @@
 ## TODO's:
 ### Set up the basic express server
 
+### Next up: dynamic routes
+
 ### Steps:
 1. Install express and nodemon
 2. Update package.json with start script
