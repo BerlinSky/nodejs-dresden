@@ -2,7 +2,7 @@
 ### Set up the basic express server
 ### Add dynamic routes
 
-### Next up: dynamic routes
+### Next up: Template engine
 
 ### Steps:
 1. Create a "data" folder
