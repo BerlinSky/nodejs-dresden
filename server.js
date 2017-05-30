@@ -24,6 +24,10 @@ app.get('/', function(req, res) {
   res.render('index', { users: users });
 })
 
+// app.get('/favicon.ico', function(req, res) {
+//   res.end('favicon.png')
+// })
+
 app.get('/:username', function(req, res) {
   var username = req.params.username;
   res.render('user', { username: username })
