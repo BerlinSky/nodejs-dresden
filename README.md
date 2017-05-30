@@ -6,7 +6,7 @@
 ### Serve Serve static files
 ### Implement Update and Delete features 
 
-### Next up: Implement Update and Delete features 
+### Next up: Redirect
 
 ### Steps: 
 1. Add "favicon.png" to the images folder
@@ -30,6 +30,5 @@ npm i lodash -S
 13. Add delete user name route
 14. Create a users folder under data
 14. Add individual user.json files to the users folder
-
-5. Run start command 
-6. View the page on a web browser
+15. Run start command 
+16. View the page on a web browser
