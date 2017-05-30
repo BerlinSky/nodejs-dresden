@@ -37,6 +37,18 @@ function saveUser (username, data) {
   fs.writeFileSync(fp, JSON.stringify(data, null, 2), {encoding: 'utf8'})
 }
 
+function verifyUser (req, res, next) {
+  var fp = getUserFilePath(req.params.username)
+
+  fs.exists(fp, function (yes) {
+    if (yes) {
+      next()
+    } else {
+      res.redirect('/error/' + req.params.username)
+    }
+  })
+}
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -66,7 +78,11 @@ app.get('/', function (req, res) {
   })
 })
 
-app.get('/:username', function (req, res) {
+app.get('/error/:username', function (req, res) {
+  res.status(404).send('No user named ' + req.params.username + ' found')
+})
+
+app.get('/:username', verifyUser, function (req, res) {
   var username = req.params.username
   var user = getUser(username)
   res.render('user', {
