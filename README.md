@@ -13,7 +13,8 @@
 ### Next up: ???
 
 ### Steps: 
-1. Add a JSON route
-2. Run start command 
-3. View the page on a web browser
-4. Add "data/" to the user page URL
+1. Move the helper functions to a new "helpers.js" file
+2. Move all user-related routes to a user router JS file
+3. Update the server.js to clean up and references 
+4. View the page on a web browser
+5. Add "data/" to the user page URL
