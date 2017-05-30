@@ -74,8 +74,16 @@ app.get('/', function (req, res) {
   })
 })
 
+// File downloading
 app.get('*.json', function (req, res) {
   res.download('./data/users/' + req.path, 'data-user.json')
+})
+
+// Rendering JSON data
+app.get('/data/:username', function (req, res) {
+  var username = req.params.username
+  var user = getUser(username)
+  res.json(user)
 })
 
 app.get('/error/:username', function (req, res) {

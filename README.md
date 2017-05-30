@@ -7,11 +7,12 @@
 ### Implement Update and Delete features 
 ### Add error handling
 ### Handling file downloading
+### Render JSON data
 
-### Next up: Render JSON data
+### Next up: ???
 
 ### Steps: 
-1. Add a download route
+1. Add a JSON route
 2. Run start command 
 3. View the page on a web browser
-4. Add ".json" to the end of the user page URL
+4. Add "data/" to the user page URL
