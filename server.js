@@ -57,10 +57,6 @@ app.use('/styles', express.static(path.join(__dirname, 'public', 'styles')))
 app.use('/photos', express.static(path.join(__dirname, 'images')))
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', function(req, res) {
-  res.render('index', { users: users });
-})
-
 app.get('/', function (req, res) {
   var users = []
   var dir = path.join(__dirname, 'data', 'users');
@@ -76,6 +72,10 @@ app.get('/', function (req, res) {
       })
     })
   })
+})
+
+app.get('*.json', function (req, res) {
+  res.download('./data/users/' + req.path, 'data-user.json')
 })
 
 app.get('/error/:username', function (req, res) {
