@@ -9,12 +9,15 @@
 ### Handling file downloading
 ### Render JSON data
 ### Organize routes
+### Use stream
 
-### Next up: ???
+### Next up: Use Middleware
 
 ### Steps: 
-1. Move the helper functions to a new "helpers.js" file
-2. Move all user-related routes to a user router JS file
-3. Update the server.js to clean up and references 
-4. View the page on a web browser
-5. Add "data/" to the user page URL
+1. Install JSONStream as a runtime library
+```
+npm i JSONStream -S
+```
+2. Update the server.js to use stream for JSON route
+3. Update the server.js to add a "gender" route
+4. View the page on a web browser (/users/by/male)

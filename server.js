@@ -5,9 +5,11 @@ var fs = require('fs')
 var path = require('path');
 
 var bodyParser = require('body-parser');
+var JSONStream = require('JSONStream');
 var _ = require('lodash');
 
 var helpers = require('./helpers')
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -46,8 +48,22 @@ app.get('*.json', function (req, res) {
 // Rendering JSON data
 app.get('/data/:username', function (req, res) {
   var username = req.params.username
-  var user = helpers.getUser(username)
-  res.json(user)
+  // var user = helpers.getUser(username)
+  // res.json(user)
+  var readable = fs.createReadStream('./data/users/' + username + '.json')
+  readable.pipe(res)
+})
+
+app.get('/users/by/:gender', function (req, res) {
+  var gender = req.params.gender
+  var readable = fs.createReadStream('./data/users.json')
+
+  readable
+    .pipe(JSONStream.parse('*', function (user) {
+      if (user.gender === gender) return user.name
+    }))
+    .pipe(JSONStream.stringify('[\n  ', ',\n  ', '\n]\n'))
+    .pipe(res)
 })
 
 app.get('/error/:username', function (req, res) {
