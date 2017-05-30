@@ -2,8 +2,22 @@ doctype html
 html(lang='eng')
   head
     title User List
+    style(type='text/css')
+      |  * {
+      |    font-family: Helvetica, Arial, sans-serif;
+      | }
+      | div {
+      |   display: flex;
+      |   align-items: center;
+      |   padding: 1em;
+      |   font-size: 1.2em;
+      | }
+      | div a {
+      |   padding-left: 0.5em;
+      | }
   body
-    ul
-      each user in users
-        li
-          a(href='/' + user.username)= user.name.first + " " + user.name.last
+    each user in users
+      div
+        img(src="/photos/" + user.username + "_sm.jpg" alt="")
+        a(href='/' + user.username)= user.name.full
+

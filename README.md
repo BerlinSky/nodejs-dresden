@@ -1,11 +1,15 @@
 ## TODO's:
+
 ### Set up the basic express server
 ### Add dynamic routes
 ### Utilize Template engine
+### Serve Serve static files
 
 ### Next up: Serve static files
 
 ### Steps:
+
+
 1. Install "pug" as runtime
 2. Create a "view" folder
 3. Crate a pug file in the view folder
