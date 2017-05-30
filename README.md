@@ -5,14 +5,12 @@
 ### Utilize Template engine
 ### Serve Serve static files
 
-### Next up: Serve static files
+### Next up: Implement Update and Delete features 
 
-### Steps:
-
-
-1. Install "pug" as runtime
-2. Create a "view" folder
-3. Crate a pug file in the view folder
-4. Update the server.js to use pug engine
+### Steps: 
+1. Update server.js to use static ('image') files
+2. Update index.pug and user.pug to display images
+3. Create an "images" folder
+4. Add image files in the images folder
 5. Run start command 
 6. View the page on a web browser
