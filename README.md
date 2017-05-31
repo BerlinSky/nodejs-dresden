@@ -12,12 +12,11 @@
 ### Use stream
 
 ### Next up: Use Middleware
+### Next up: Integrate mongodb
 
 ### Steps: 
-1. Install JSONStream as a runtime library
-```
-npm i JSONStream -S
-```
-2. Update the server.js to use stream for JSON route
-3. Update the server.js to add a "gender" route
-4. View the page on a web browser (/users/by/male)
+1. Understand the built-in middleware
+2. Understand the 3rd party middleware
+3. Understand the custom middleware
+4. Understand the built-in middleware error handling middleware
+
