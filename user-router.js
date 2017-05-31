@@ -25,6 +25,12 @@ router.get('/', helpers.verifyUser, function (req, res) {
   })
 })
 
+// The default error handling is not invoked if a custom error handling method as above exists
+router.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('The default error handling is invoked!')
+})
+
 router.get('/edit', function (req, res) {
   res.send('You want to edit ' + req.params.username + '???')
 })
