@@ -9,9 +9,8 @@
 ### Handling file downloading
 ### Render JSON data
 ### Organize routes
-### Use stream
+### Use stream and Middleware
 
-### Next up: Use Middleware
 ### Next up: Integrate mongodb
 
 ### Steps: 
