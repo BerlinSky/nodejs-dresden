@@ -18,6 +18,11 @@ html(lang='eng')
         
     h1= user.name.full
     dl
+      dt Name
+      dd.view= user.name.full
+      dd.edit
+        input(id="name" type="text" value=user.name.full)
+      br
       dt Street
       dd.view= address.street
       dd.edit

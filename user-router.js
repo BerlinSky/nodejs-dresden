@@ -8,24 +8,10 @@ var router = express.Router({
   mergeParams: true
 })
 
-// router.all('/', function (req, res, next) {
-//   console.log(req.method, 'for', req.params.username)
-//   next()
-// })
-
 router.use(function (req, res, next) {
   console.log(req.method, 'for', req.params.username, ' at ' + req.path)
   next()
 })
-
-// router.get('/', helpers.verifyUser, function (req, res) {
-//   var username = req.params.username
-//   var user = helpers.getUser(username)
-//   res.render('user', {
-//     user: user,
-//     address: user.location
-//   })
-// })
 
 router.get('/', function (req, res) {
   var username = req.params.username
@@ -49,25 +35,26 @@ router.get('/edit', function (req, res) {
 
 // router.put('/', function (req, res) {
 //   var username = req.params.username
-//   var user = helpers.getUser(username)
-//   user.location = req.body
-//   helpers.saveUser(username, user)
-//   res.end()
+
+//   User.findOneAndUpdate({username: username}, {location: req.body}, function (err, user) {
+//     res.end()
+//   })
 // })
 
 router.put('/', function (req, res) {
-  var username = req.params.username
+  var username = req.params.username;
 
-  User.findOneAndUpdate({username: username}, {location: req.body}, function (err, user) {
-    res.end()
-  })
-})
+  User.findOne({username: username}, function (err, user) {
+    if (err) console.error(err);
 
-// router.delete('/', function (req, res) {
-//   var fp = helpers.getUserFilePath(req.params.username)
-//   fs.unlinkSync(fp) // delete the file
-//   res.sendStatus(200)
-// })
+    user.name.full = req.body.name;
+    user.location = req.body.location;
+
+    user.save(function () {
+      res.end();
+    });
+  });
+});
 
 router.delete('/', function (req, res) {
   User.findOneAndRemove({username: req.params.username}, function (err, user) {  

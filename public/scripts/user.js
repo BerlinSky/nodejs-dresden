@@ -12,10 +12,13 @@ function save (userName) {
   $.ajax('/' + userName, {
     method: 'PUT',
     data: {
-      street: $('#street').val(),
-      city: $('#city').val(),
-      state: $('#state').val(),
-      zip: $('#zip').val()
+      name: $('#name').val(),
+      location: {
+        street: $('#street').val(),
+        city: $('#city').val(),
+        state: $('#state').val(),
+        zip: $('#zip').val()
+      }
     },
     complete: function () {
       cancel()

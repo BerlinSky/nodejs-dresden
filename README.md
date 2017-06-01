@@ -10,11 +10,17 @@
 ### Render JSON data
 ### Organize routes
 ### Use stream and Middleware
-### Next up: Integrate mongodb
-
-### Next up: Use mongodb virtual properties
+### Integrate mongodb
+### Use mongodb virtual properties
 
 ### Steps: 
+1. Reimport the data file without the "virtual" fields
+```
+> mongoimport --db test --collection users --drop --file user_list.json
+```
+
+
+
 1. Install mongodb package 
 ```
 npm i mongodb -S
