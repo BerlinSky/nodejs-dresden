@@ -23,6 +23,13 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
+router.get('/news', function (req, res) {
+  // var username = req.params.username
+  // var user = helpers.getUser(username)
+
+  res.render('news')
+})
+
 // router.get('/', helpers.verifyUser, function (req, res) {
 //   var username = req.params.username
 //   var user = helpers.getUser(username)
