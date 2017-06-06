@@ -16,4 +16,7 @@
 4. Remove user reference
 5. Remove lodash
 6. Remove helper.js
+7. Remove "data" folder
+8. Empty "images" folder
+
 

@@ -6,6 +6,9 @@ var path = require('path');
 
 var bodyParser = require('body-parser');
 var JSONStream = require('JSONStream');
+
+var appRouter = require('./app-router')
+
 // var _ = require('lodash');
 
 // var helpers = require('./helpers')
@@ -66,8 +69,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //     .pipe(res)
 // })
 
-var userRouter = require('./user-router')
-app.use('/', userRouter)
+app.use('/', appRouter)
 
 var server = app.listen(4000, function() {
   console.log('Server is running at http://localhost:' + server.address().port)
