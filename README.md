@@ -18,5 +18,6 @@
 6. Remove helper.js
 7. Remove "data" folder
 8. Empty "images" folder
+9. Remove JSON stream (uninstall)
 
 
