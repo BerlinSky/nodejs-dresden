@@ -1,5 +1,5 @@
 var express = require('express')
-var helpers = require('./helpers')
+// var helpers = require('./helpers')
 var fs = require('fs')
 
 var router = express.Router({
@@ -16,14 +16,21 @@ router.use(function (req, res, next) {
   next()
 })
 
-router.get('/', helpers.verifyUser, function (req, res) {
-  var username = req.params.username
-  var user = helpers.getUser(username)
-  res.render('user', {
-    user: user,
-    address: user.location
-  })
+router.get('/', function (req, res) {
+  // var username = req.params.username
+  // var user = helpers.getUser(username)
+
+  res.render('index')
 })
+
+// router.get('/', helpers.verifyUser, function (req, res) {
+//   var username = req.params.username
+//   var user = helpers.getUser(username)
+//   res.render('user', {
+//     user: user,
+//     address: user.location
+//   })
+// })
 
 // The default error handling is not invoked if a custom error handling method as above exists
 router.use(function (err, req, res, next) {
@@ -31,22 +38,22 @@ router.use(function (err, req, res, next) {
   res.status(500).send('The default error handling is invoked!')
 })
 
-router.get('/edit', function (req, res) {
-  res.send('You want to edit ' + req.params.username + '???')
-})
+// router.get('/edit', function (req, res) {
+//   res.send('You want to edit ' + req.params.username + '???')
+// })
 
-router.put('/', function (req, res) {
-  var username = req.params.username
-  var user = helpers.getUser(username)
-  user.location = req.body
-  helpers.saveUser(username, user)
-  res.end()
-})
+// router.put('/', function (req, res) {
+//   var username = req.params.username
+//   var user = helpers.getUser(username)
+//   user.location = req.body
+//   helpers.saveUser(username, user)
+//   res.end()
+// })
 
-router.delete('/', function (req, res) {
-  var fp = helpers.getUserFilePath(req.params.username)
-  fs.unlinkSync(fp) // delete the file
-  res.sendStatus(200)
-})
+// router.delete('/', function (req, res) {
+//   var fp = helpers.getUserFilePath(req.params.username)
+//   fs.unlinkSync(fp) // delete the file
+//   res.sendStatus(200)
+// })
 
 module.exports = router

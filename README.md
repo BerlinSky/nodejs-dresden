@@ -7,15 +7,13 @@
 ### Implement Update and Delete features 
 ### Add error handling
 ### Handling file downloading
-### Render JSON data
-### Organize routes
-### Use stream and Middleware
+## Master Site on NodeJS
 
-### Next up: Integrate mongodb
-
-### Steps: 
-1. Understand the built-in middleware
-2. Understand the 3rd party middleware
-3. Understand the custom middleware
-4. Understand the built-in middleware error handling middleware
+### Setup
+1. Remove RESTFul methods from the router
+2. Remove JSON response
+3. Remove download response
+4. Remove user reference
+5. Remove lodash
+6. Remove helper.js
 
