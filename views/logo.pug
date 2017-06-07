@@ -10,7 +10,7 @@ html(lang='eng')
       | }
       | circle {
       |   fill: none;
-      |   stroke: blue;
+      |   stroke: tomato;
       |   stroke-width: 7px;
       | }
 
@@ -34,6 +34,10 @@ html(lang='eng')
       |   fill: tomato;
       | }
 
+      | .triangleGroup {
+      |   stroke-width: 1px;
+      | }
+
   body
     h2 Logo in SVG ...
 
@@ -43,5 +47,17 @@ html(lang='eng')
       polygon(points="52,190 134,30 216,190") 
       text(x="134", y="142") SVG
 
-      //- rect(height="50", width="80", fill="#fff", x="10", y="10")
-      //- rect(height="10", width="40", x="30", y="90")
+      g(class="triangleGroup" transform="translate(45,67)") 
+        polygon(points="7,10 12,0 17,10", fill="purple") 
+        polygon(points="0,25 5,15 10,25", fill="purple") 
+        polygon(points="15,25 20,15 25,25", fill="purple") 
+
+      g(class="triangleGroup" transform="translate(198,67)") 
+        polygon(points="7,10 12,0 17,10", fill="purple") 
+        polygon(points="0,25 5,15 10,25", fill="purple") 
+        polygon(points="15,25 20,15 25,25", fill="purple") 
+
+      g(class="triangleGroup" transform="translate(121.5,211)") 
+        polygon(points="7,10 12,0 17,10", fill="purple") 
+        polygon(points="0,25 5,15 10,25", fill="purple") 
+        polygon(points="15,25 20,15 25,25", fill="purple") 
