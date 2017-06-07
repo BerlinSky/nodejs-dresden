@@ -3,6 +3,14 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
+const javascript = {
+  test: /\.(js)$/, 
+  use: [{
+    loader: 'babel-loader',
+    options: { presets: ['es2015'] } 
+  }],
+};
+
 const styles = {
   test: /\.(scss)$/,
   use: ExtractTextPlugin.extract(['css-loader?sourceMap', 'postcss-loader?sourceMap', 'sass-loader?sourceMap'])
