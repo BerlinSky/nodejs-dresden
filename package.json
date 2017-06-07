@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "assets": "webpack",
     "start": "nodemon server.js",
     "server": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "1.11.0"
+    "css-loader": "0.28.4",
+    "extract-text-webpack-plugin": "2.1.0",
+    "node-sass": "4.5.3",
+    "nodemon": "1.11.0",
+    "postcss-loader": "2.0.5",
+    "sass-loader": "6.0.5",
+    "webpack": "2.6.1"
   },
   "dependencies": {
     "body-parser": "1.17.2",

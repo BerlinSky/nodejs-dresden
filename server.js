@@ -10,8 +10,8 @@ var appRouter = require('./app-router')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.use('/scripts', express.static(path.join(__dirname, 'public', 'scripts')))
-app.use('/styles', express.static(path.join(__dirname, 'public', 'styles')))
+// app.use('/scripts', express.static(path.join(__dirname, 'public', 'dist')))
+app.use('/styles', express.static(path.join(__dirname, 'public', 'dist')))
 app.use('/images', express.static(path.join(__dirname, 'public', 'images')))
 
 app.use(bodyParser.urlencoded({ extended: true }));
