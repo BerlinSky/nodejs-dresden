@@ -1,0 +1,42 @@
+$break-xsmall: 320px;
+$break-small: 500px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-xlarge: 40000px;
+
+// @mixin respondTo($mediaSize) {
+// 	@if $mediaSize == x-small {
+// 	  @media only screen and (max-width: $break-xsmall) { @content; }
+// 	}
+// 	@else if $mediaSize == small {
+// 	  @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small) { @content; }
+// 	}
+// 	@else if $mediaSize == medium {
+// 	  @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+// 	}
+// 	@else if $mediaSize == large {
+// 	  @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+// 	}
+// 	@else if $mediaSize == x-large {
+// 	  @media only screen and (min-width: $break-large + 1) and (max-width: $break-xlarge) { @content; }
+// 	}
+// }
+
+// Usage example:
+// @include respondTo(x-mall) { width: 100% ;}
+
+$breakpoints: (
+  xs: 16rem,   // 256px
+  sm: 25.875rem,  // 414px
+  /*md: 54.875rem, 	// 878px*/
+  md: 56rem, 	// 896px
+  lg: 64rem,   // 1024px - iPad Mini
+  xl: 76.50rem,  // 1224px
+  xxl: 95rem		// 1520px
+);
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

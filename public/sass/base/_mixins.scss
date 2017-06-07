@@ -1,0 +1,47 @@
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
+  text-decoration: none;
+  &:#{$where} {
+    @if $content {
+      content: $content;
+    }
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: none;
+  }
+}
+
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0, 0, 0, 0)) {
+  padding: ($tb + nth($pad, 1)) ($lr + nth($pad, 2)) max(0.1em, $tb - _size(element-margin) + nth($pad, 3)) ($lr + nth($pad, 4));
+}
+
+@mixin accordionLabel() {
+  font-size: _fontDef(acoordion-label, font-size);
+  line-height: _fontDef(acoordion-label, line-height);
+  font-weight: _fontDef(acoordion-label, font-weight);
+  letter-spacing: _fontDef(acoordion-label, letter-spacing);
+}
+
+@mixin bodyText($contentSize: default) {
+  font-weight: 300;
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+  @if $contentSize=="small" {
+    font-size: 0.925rem;
+  }
+  @if $contentSize=="default" {
+    font-size: 1.0rem;
+  }
+  @if $contentSize=="large" {
+    font-size: 1.25rem;
+  }
+}

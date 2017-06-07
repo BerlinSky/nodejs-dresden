@@ -1,0 +1,33 @@
+// Color Palette.
+
+// http://www.color-blindness.com/color-name-hue/
+$color-white: #fff;
+$color-black: #000;
+$color-grey-night-rider: rgba(255, 255, 255, .2);
+$color-tiber: #e2e2e2;
+$color-jewel: #d6b161;
+$color-nero: #222;
+$color-gainsboro: #e8e8e8;
+
+$color-palette: (
+  white: #ffffff,
+  trout: #475058,
+  mine_shaft: #333333,
+  wild_sand: #f4f4f4,
+  storm_dust: #646464,
+  masala: #3c3b3b,
+  silver_chalice: #aaaaaa,
+  puerto_rico: #2ebaae,
+  desert_storm: #f8f8f8,
+);
+
+// TODO: Refactor:
+// white: #ffffff,
+// trout: #475058,
+// mine_shaft: #333333,
+// wild_sand: #f4f4f4,
+// storm_dust: #646464,
+// masala: #3c3b3b,
+// silver_chalice: #aaaaaa,
+// puerto_rico: #2ebaae,
+// desert_storm: #f8f8f8,
