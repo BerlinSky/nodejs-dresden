@@ -22,6 +22,10 @@ router.get('/phone', function (req, res) {
   res.render('phone')
 })
 
+router.get('/logo', function (req, res) {
+  res.render('logo')
+})
+
 router.use(function (err, req, res, next) {
   console.error(err.stack)
   res.status(500).send('The default error handling is invoked!')
