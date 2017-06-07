@@ -4,12 +4,14 @@
   "description": "",
   "scripts": {
     "assets": "webpack",
-    "start": "nodemon server.js",
+    "watch": "nodemon ./server.js --ignore public/",
+    "start": "concurrently 'npm run watch' 'npm run assets'",
     "server": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "3.4.0",
     "css-loader": "0.28.4",
     "extract-text-webpack-plugin": "2.1.0",
     "node-sass": "4.5.3",
