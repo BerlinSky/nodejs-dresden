@@ -19,12 +19,29 @@ html(lang='eng')
       |   stroke-width: 5px;
       | }
 
+      | text {
+      |   font-size: 60px;
+      |   font-family: 'FilmotypedMajor';
+      |   text-anchor: middle;
+      |   stroke: #000;
+      |   stroke-width: 3px;
+      |   fill: #f6f7f3;
+      | }
+
+      | polygon {
+      |   stroke: #000;
+      |   stroke-width: 2px;
+      |   fill: tomato;
+      | }
+
   body
     h2 Logo in SVG ...
 
     svg(xmlns='http://www.w3.org/2000/svg', version="1.1", height="300", width="400")
       circle(r="130", cx="134", cy="134")
       line(x1="47", y1="198", x2="221", y2="198")
+      polygon(points="52,190 134,30 216,190") 
+      text(x="134", y="142") SVG
 
       //- rect(height="50", width="80", fill="#fff", x="10", y="10")
       //- rect(height="10", width="40", x="30", y="90")
