@@ -14,8 +14,12 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
-router.get('/news', function (req, res) {
-  res.render('news')
+router.get('/tv', function (req, res) {
+  res.render('tv')
+})
+
+router.get('/phone', function (req, res) {
+  res.render('phone')
 })
 
 router.use(function (err, req, res, next) {

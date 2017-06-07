@@ -1,7 +1,7 @@
 doctype html
 html(lang='eng')
   head
-    title News Page
+    title TV
     link(rel="shortcut icon" href="/images/favicon.png")
 
     style(type='text/css')
@@ -18,4 +18,9 @@ html(lang='eng')
       |   padding-left: 0.5em;
       | }
   body
-    h2 News page ...
+    h2 TV in SVG ...
+
+    svg(xmlns='http://www.w3.org/2000/svg', version="1.1", height="300", width="400")
+      rect(height="80", width="100")
+      rect(height="50", width="80", fill="#fff", x="10", y="10")
+      rect(height="10", width="40", x="30", y="90")

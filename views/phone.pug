@@ -1,0 +1,49 @@
+doctype html
+html(lang='eng')
+  head
+    title Phone
+    link(rel="shortcut icon" href="/images/favicon.png")
+
+    style(type='text/css')
+      | circle {
+      |   animation: grow 2s infinite;
+      |   transform-origin: center; 
+      |   -webkit-transform-origin: center; 
+      | }
+      |
+      | @-webkit-keyframes grow {
+      |   0%: {transform: scale(1);}
+      |   50%: {transform: scale(0.5);}
+      |   100%: {transform: scale(1);}
+      | }
+      |  
+      | @keyframes grow {
+      |   0%: {transform: scale(1);}
+      |   50%: {transform: scale(0.5);}
+      |   100%: {transform: scale(1);}
+      | }
+      | div a {
+      |   padding-left: 0.5em;
+      | }
+
+      
+  body
+    h2 Phone in SVG ...
+
+    svg(xmlns='http://www.w3.org/2000/svg', version="1.1", height="300", width="400")
+      rect(height="100", width="70", fill="#fff", stroke="#ff2626", stroke-width="10" x="5", y="5", rx="5", ry="5")
+      circle(cx="40", cy="105", r="3", fill="#fff")
+
+      //- rect(height="50", width="80", fill="#fff", x="10", y="10")
+      //- rect(height="10", width="40", x="30", y="90")
+
+
+      //- circle {
+      //-   animation: grow 2s infinite;
+      //-   transform-origin: center;
+      //- }
+      //- @keyframes grow {
+      //-   0% {transform: scale(1);}
+      //-   50% {transform: scale(0.5);}
+      //-   100% {transform: scale(1);}
+      //- }
