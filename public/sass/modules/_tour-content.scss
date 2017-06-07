@@ -1,0 +1,135 @@
+.contentContainer--tourContent {
+
+	display: block;
+	clear: both;
+  min-height: 80vh;
+
+  width: 100%;
+  margin: 20px auto 20px auto;
+  background-color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+
+	// @include break(md) {
+	// 	max-width: 56rem;
+  //   padding: 15px;
+	// }
+
+  @include break(md) {
+		max-width: 60rem;
+    padding: 15px;
+	}
+
+	@include break(xl) {
+		max-width: 70rem;
+    padding: 15px;
+	}
+
+ .divider {
+    display: inline-block;
+    width: 100%;
+    color: #e2e2e2;
+    height: 1px;
+    border-top-width: 1px;
+
+    &.divider--solid {
+      border-top-style: solid;
+    }
+  }
+
+	.tourHeaderPanel {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+		padding: 5px;
+
+		h2 {
+			font-size: 1.1em;
+			margin: 15px 0 0 0;
+			width: 100%;
+			text-align: left;
+
+			@include break(md) {
+				padding: 0 5px 0 5px;
+			}
+		}
+	}
+
+	.tourListPanel {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+    @include break(md) {
+      flex-direction: row;
+    }
+
+		width: 100%;
+		padding: 5px 15px 5px 15px;
+    margin-bottom: 15px;
+
+    // border: 3px solid rgba(86, 80, 79, 0.45);
+    background-color: #f4f4f4;;
+
+    width: 100%;
+    color: #777;
+
+    .tourItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .tourDate {
+      color: #333;
+      line-height: 1.825rem;
+      font-size: 1.1rem;
+    }
+
+    .tourLocation {
+      color: #909090;
+      font-weight: 300;
+      line-height: 1.725rem;
+      font-size: 1.0rem;
+    }
+
+    .tourForCms {
+      color: #909090;
+      font-weight: 300;
+      line-height: 1.725rem;
+      font-size: 1.0rem;
+    }
+	}
+}
+
+.tourButton {
+	// background-color: #9c1c1c;
+
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 1.25rem;
+	font-weight: 400;
+  letter-spacing: 0;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	// vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.tourButton--default {
+	color: #333;
+  font-size: 1.1rem;
+
+	// background-color: #000;
+	font-weight: 400;
+	border-radius: 0;
+	// border-color: #9c1c1c;
+}

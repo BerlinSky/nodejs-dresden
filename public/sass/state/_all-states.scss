@@ -1,0 +1,19 @@
+// .desktop-hidden {
+// 	@include respondTo(large) {
+// 		visibility: hidden;
+// 	}	
+
+// 	@include respondTo(x-large) {
+// 		visibility: hidden;
+// 	}
+// }
+
+// .mobile-hidden {
+// 	@include respondTo(x-small) {
+// 		visibility: hidden;
+// 	}	
+
+// 	@include respondTo(small) {
+// 		visibility: hidden;
+// 	}
+// }

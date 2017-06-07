@@ -1,0 +1,188 @@
+.l-pageContainer {
+	height: 100vh;
+	display: flex;
+
+
+  flex-wrap: wrap;
+	flex-direction: row;
+  align-content: space-between;
+
+	.l-pageHeader {
+    flex-grow: 1;
+    flex-basis: 100%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: stretch;
+
+		@include break(md) {
+      flex-direction: row;
+			justify-content: space-between;
+		}
+
+    .l-navContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .l-logoContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        @include break(md) {
+          flex: 1;
+        }
+      }
+    }
+
+    .l-menuWrapper {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+
+      @include break(md) {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .l-menuContainer {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+
+        @include break(md) {
+          display: block;
+        }
+
+        margin: 0;
+      }
+    }
+
+	}
+
+  .l-pageContentWrapper {
+    flex: 1;
+    flex-basis: 100%;
+
+    // align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+
+    .l-contentContainer {
+      flex: 1;
+    }
+  }
+
+  .l-pageFooter {
+    flex-basis: 100%;
+  }
+}
+
+.l-pageContainer.pageContainer {
+	/* fix for firefox autocomplete positioning */
+	position: absolute;
+	width: 100%;
+}
+
+.l-contentFooterContainer {
+  margin: 0;
+}
+
+.l-fixed-header .l-pageContentWrapper {
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.l-contentHeaderContainer {
+
+	.l-header {
+    min-height: 50px;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+
+    padding: 30px 2px;
+
+    @include break(md) {
+      padding: 20px;
+    }
+
+    .l-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span.title {
+        letter-spacing: 8px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        font-family: "Montserrat", Arial, Tahoma, sans-serif;
+        color: #009cde;
+      }
+    }
+
+		.l-breadCrumbs {
+      display: none;
+
+      @include break(md) {
+        display: flex;
+      }
+
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+
+      li {
+        margin-left: 10px;
+        color: #009cde;
+
+        a {
+          cursor: auto;
+          font-size: 1.1rem;
+          letter-spacing: 2px;
+        }
+
+        a, a:visited, a:focus {
+          text-decoration: none;
+          outline: 0;
+        }
+      }
+		}
+	}
+}
+
+.l-paletteBlockContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include break(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.l-paletteBlock {
+ flex: 1 1 auto;
+
+  @include break(md) {
+    flex: 0 0 50%;
+  }
+
+  @include break(lg) {
+    flex: 0 0 25%;
+  }
+}

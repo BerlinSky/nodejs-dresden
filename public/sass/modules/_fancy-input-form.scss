@@ -1,0 +1,275 @@
+.dataForm {
+	// padding-top: 20px;
+	// padding-bottom: 20px;
+
+	display: flex;
+	flex-direction: column;
+
+	&__section {
+		margin-top: 15px;
+		// margin-left: 35px;
+		// border: 3px solid transparent;
+		// border: 1px solid blue;
+		&--combo {
+			display: flex;
+		}
+	}
+
+	&__buttonPanel {
+
+		margin-top: 25px;
+	}
+
+}
+
+.dataInput {
+	// color: red;
+
+	background-color: #222;
+	color: #fff;
+	border: 1px solid #333;
+	border-radius: 0;
+
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.dataInput:invalid {
+	box-shadow: none;
+}
+
+.dataInput:-moz-submit-invalid {
+	box-shadow: none;
+}
+
+.dataInput:-moz-ui-invalid {
+	box-shadow:none;
+}
+
+input {
+
+	margin-bottom: 8px;
+	// font-size: 14px;
+	// padding: 5px;
+	// border: 0;
+	border: none;
+	// width: 620px;
+	padding: 25px 25px 10px;
+	font-size: 18px;
+	// text-transform: uppercase;
+	max-width: 100%;
+	// border: 3px solid transparent;
+	border-width: 2px;
+	border-style: inset;
+	border-color: initial;
+}
+
+input:focus, input:active {
+	outline: none;
+	border-color: #fac43d;
+}
+
+.inputGroup {
+	position: relative;
+
+	&--country {
+		width: 45%;
+	}
+
+	&--state {
+		width: 35%;
+	}
+
+	&--zip {
+		width: 20%;
+		height: 70px;
+		margin-top: 0;
+		background-color: #fff;
+	}
+
+	&--textAreaWrapper {
+		border: 1px solid #333;
+		padding: 35px 10px 5px 10px;
+
+		textArea.dataInput {
+			border: none;
+			outline: none;
+		}
+		textArea + label.labelTextArea {
+			top: 25px;
+		}
+	}
+
+	.dataInput--secondary {
+		padding: 5px;
+		font-size: 1.25rem;
+	}
+
+	.inputGroup label.dataLabel--secondary {
+		font-size: 14px;
+	}
+
+	.dataInput--bordered {
+		border: 1px solid #999;
+		border-radius: 0;
+	}
+
+	select.dataInput {
+		height: 65px;
+		padding-left: 25px;
+		padding-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	select.dataInput + label {
+		top: 30%;
+	}
+}
+
+.inputGroup label {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	transform: translateY(-50%);
+	font-style: italic;
+	// font-size: 14px;
+	font-size: 18px;
+	color: #999;
+	pointer-events: none;
+	transition: all 0.15s ease-out 0s;
+
+	&.dropdownlabel {
+		top: 20px;
+	}
+}
+
+.inputGroup .psudoLabel {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	transform: translateY(-50%);
+	font-style: italic;
+	// font-size: 14px;
+	font-size: 18px;
+	color: #999;
+	pointer-events: none;
+	transition: all 0.15s ease-out 0s;
+
+	&.dropdownlabel {
+		top: 20px;
+	}
+}
+
+.inputGroup input:focus + label,
+.inputGroup input.js-userData + label {
+	top: 20px;
+	// font-size: 12px;
+	font-size: 16px;
+	color: #aaa;
+}
+
+.dropdownPanel {
+	background-color: #fff;
+	height: 70px;
+	padding-top: 30px;
+	// padding-left: 25px;
+}
+
+.dataForm__buttonPanel--secondary {
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.dataForm__buttonPanel--tertiary {
+	margin-top: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.actionButton--bordered {
+	border: 1px solid;
+
+	&:hover {
+		border-bottom-color: inherit;
+	}
+}
+
+.inputCheckbox {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	height: 70px;
+
+	background-color: #222;
+	color: #fff;
+	border: 1px solid #333;
+	border-radius: 0;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	.checkboxInline {
+		min-height: 20px;
+		padding-left: 40px;
+		margin-bottom: 0;
+		font-weight: 400;
+		cursor: pointer;
+
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+
+		.checkboxInline__input {
+			position: absolute;
+			margin-left: -20px;
+			line-height: normal;
+		}
+
+		.checkboxInline__label {
+			font-size: 1rem;
+			line-height: 1.25rem;
+			margin: 0 0 10px;
+
+			p {
+				margin: 0 0 10px;
+			}
+		}
+
+	}
+}
+
+.inputButtonGroup {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+  padding: 15px;
+
+	.inputButton {
+		width: 50%;
+		display: block;
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center;
+		color: #222;
+		background: #fff;
+		padding: 10px 40px;
+		text-transform: uppercase;
+		border: 1px solid #e8e8e8;
+	}
+}
+
+.inputRecatchaContainer {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}

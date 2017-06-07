@@ -1,0 +1,224 @@
+.contentContainer--newsContent {
+
+  // display: block;
+  // clear: both;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+
+  width: 100%;
+  margin: 20px auto 20px auto;
+  background-color: #fff;
+
+  // @include break(md) {
+  //   max-width: 56rem;
+  //   padding: 15px;
+  // }
+
+  @include break(md) {
+		max-width: 60rem;
+    padding: 15px;
+	}
+
+	@include break(xl) {
+		max-width: 70rem;
+    padding: 15px;
+	}
+
+  .divider {
+    display: inline-block;
+    width: 100%;
+    color: #e2e2e2;
+    height: 1px;
+    border-top-width: 1px;
+
+    &.divider--solid {
+      border-top-style: solid;
+    }
+  }
+
+  .newHeaderPanel {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding: 5px;
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      margin: 15px 0 0 0;
+      width: 100%;
+      text-align: left;
+      letter-spacing: 2px;
+      font-weight: normal;
+      font-family: "Source Sans Pro", sans-serif;
+
+      @include break(md) {
+        padding: 0 5px 0 5px;
+      }
+    }
+  }
+
+  .tourNewsPanel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    padding: 5px;
+
+    h3 {
+      font-size: 1.4rem;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      margin: 0 0 1em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .tourNewsBox {
+      // background-color: yellow;
+
+      width: 100%;
+
+      @include break(md) {
+        width: 25%;
+      }
+
+      color: #777;
+
+      h4 {
+        font-size: 1.2rem;
+        font-family: Homenaje,Helvetica,sans-serif;
+        font-weight: 800;
+        letter-spacing: .25em;
+        line-height: 1.65;
+        margin: 0 0 1em;
+        text-transform: uppercase;
+      }
+
+      .tourDateAndVenue {
+        display: flex;
+        // flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .tourDate, .tourLocation {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          // align-items: flex-start;
+        }
+
+        .tourDate {
+          align-items: center;
+
+          background: linear-gradient(180deg,#0ca4e1 0,#57b9e5);
+          color: #fefefe;
+          // position: absolute;
+          // top: 0;
+          // display: inline-block;
+          width: 60px;
+          height: 60px;
+          line-height: 1.562rem;
+          border-radius: 0;
+        }
+
+        .tourLocation {
+          display: inline-block;
+          margin-left: 5px;
+          font-size: 20px;
+          font-family: Yanone Kaffeesatz,serif;
+          line-height: 1.5rem;
+        }
+
+      }
+
+    }
+  }
+
+  .otherNewsPanel {
+    // background-color: lightgreen;
+
+    width: 100%;
+    padding: 5px;
+
+    h3 {
+      font-size: 1.2rem;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .newsListItem {
+      font-size: 0.875rem;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      line-height: 1.65;
+      margin: 1rem 0 1rem;
+      text-transform: uppercase;
+      color: #222;
+
+      a {
+        transition: color .2s ease,border-bottom-color .2s ease;
+        text-decoration: none;
+        border-bottom: none;
+      }
+
+      p {
+        margin: 15px 0 30px;
+        color: #7e7e7e;
+
+        font-family: "Source Sans Pro", sans-serif;
+        line-height: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.imageFrame {
+  .imageResponsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.siteButton {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.siteButton--default {
+  color: #d6d6d6;
+  background-color: #9c1c1c;
+  border-radius: 0;
+  border-color: #9c1c1c;
+}
