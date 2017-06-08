@@ -13,6 +13,7 @@ app.set('view engine', 'pug');
 // app.use('/scripts', express.static(path.join(__dirname, 'public', 'dist')))
 app.use('/styles', express.static(path.join(__dirname, 'public', 'dist')))
 app.use('/images', express.static(path.join(__dirname, 'public', 'images')))
+app.use('/fonts', express.static(path.join(__dirname, 'public', 'fonts')))
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
