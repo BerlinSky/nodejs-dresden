@@ -1,13 +1,6 @@
 //- extends includes/base
 extends layouts/default-layout
 
-mixin menuItems(...items)
-	each item in items
-		li.menuItem
-			a(href='#')
-				span= item
-
-
 block pageTitle
 	title Reading Life
 
@@ -18,27 +11,7 @@ block bodyContent
 				
 			include ./components/navigation/site-menu-bar
 				
-
-			//- div.l-menuWrapper.menuWrapper.js-menuWrapper
-			//- 	div.l-menuContainer.menuContainer.js-mobileMenuContainer
-			//- 		ul.menuList
-			//- 			+menuItems('Home')
-			//- 			li.menuItem
-			//- 				a(href='#').currentSelection
-			//- 					span Color Palette
-			//- 			+menuItems('Typography', 'Text Styles', 'Breakpoints', 'Buttons')
-
-				//- div.l-searchContainer.searchContainer.js-showSearchPanel
-				//- 	a.searchButton.searchButton--default
-				//- 		i.fa.fa-search
-				//- div.l-searchWrapper.searchWrapper.js-searchPanel
-				//- 	form(action="#" method='post').l-searchWrapper__form
-				//- 		a.searchButton.searchButton--whiteSquare
-				//- 			i.fa.fa-search
-				//- 		input(type="text" name="s" placeholder="Enter your search").searchInput
-				//- 		a.closeButton.closeButton--dimmedSquare.js-hideSearchPanel
-				//- 			i.fa.fa-close
-
+			
 		div.l-pageContentWrapper.pageContentWrapper
 			div.l-contentContainer.contentContainer.contentContainer--newsContent
 				div.newHeaderPanel
