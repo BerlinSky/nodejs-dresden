@@ -10,48 +10,45 @@ block bodyContent
       include ./components/navigation/site-nav-bar
       include ./components/navigation/site-menu-bar
 
-    div.l-pageContentWrapper.pageContentWrapper
-      div.l-contentContainer.contentContainer.contentContainer--newsContent
-        div.newHeaderPanel
+    .l-pageContentWrapper.pageContentWrapper
+      .l-contentContainer.contentContainer.contentContainer--newsContent
+        .newHeaderPanel
           h2 News
-          //- div.imageFrame
-          //- 	img(alt='img' src='./images/header-border.png').imageResponsive
           .divider.divider--solid
 
-        div.tourNewsPanel
-          div.tourNewsBox
+        .tourNewsPanel
+          .tourNewsBox
             h3 Tour Dates
             h4 Upcoming Tour Dates
-            div.imageFrame
+            .imageFrame
               img(alt='img' src='./images/header-border.png').imageResponsive
-            div.tourDateAndVenue
-              div.tourDate
-                div.tourMonth Apr
-                div.tourDay 06
-              div.tourLocation
-                div.tourLocation__city St. Louis, MO
-                div.tourLocation__name The Pageant
+            .tourDateAndVenue
+              .tourDate
+                .tourMonth Apr
+                .tourDay 06
+              .tourLocation
+                .tourLocation__city St. Louis, MO
+                .tourLocation__name The Pageant
             a.siteButton.siteButton--default(href="/tour") More &gt;&gt;
 
-        div.otherNewsPanel
+        .otherNewsPanel
           h3 Other News
-          //- div.imageFrame
-          //- 	img(alt='img' src='./images/header-border.png').imageResponsive
           .divider.divider--solid
-          div.newsList
-            div.newsListItem
+          
+          .newsList
+            .newsListItem
               a(href="/news?title=chanterelle") A Room of One's Own
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
 
-            div.newsListItem
+            .newsListItem
               a(href="/news?title=chanterelle") Chanterelle
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
 
-            div.newsListItem
+            .newsListItem
               a(href="/news?title=chanterelle") A Room of One's Own
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
 
-            div.newsListItem
+            .newsListItem
               a(href="/news?title=chanterelle") Chanterelle
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
 
