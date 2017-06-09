@@ -1,15 +1,14 @@
-//- extends includes/base
 extends layouts/default-layout
 
 block pageTitle
   title Reading Life
 
 block bodyContent
-
-  div.l-pageContainer.pageContainer
-    div.l-pageHeader.pageHeader
+  .l-pageContainer.pageContainer
+    .l-pageHeader.pageHeader
       include ./components/navigation/site-nav-bar
       include ./components/navigation/site-menu-bar
+
 
     div.l-pageContentWrapper.pageContentWrapper
       div.l-contentContainer.contentContainer.contentContainer--newsContent
@@ -58,16 +57,4 @@ block bodyContent
 
       include ./components/footer/default-footer
 
-      //- div.l-contentFooterContainer.contentFooterContainer
-      //- 	div.footerPanel.footerPanel--links
-      //- 		div.footerPanel__item.footerPanel__item--default
-      //- 			ul
-      //- 				li
-      //- 					a(href="/help" target="") Help
-      //- 				li
-      //- 					a(href="/help" target="") Newsletter
-      //- 				li
-      //- 					a(href="/help" target="") Terms of Use
-      //- 				li
-      //- 					a(href="/help" target="") Privacy Policy
-      //- 		div.footerPanel__item.footerPanel__item--copyright Copyright © 2017 This Web Site
+      
