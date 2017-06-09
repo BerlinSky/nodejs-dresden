@@ -27,6 +27,12 @@
   "dependencies": {
     "body-parser": "1.17.2",
     "express": "4.15.3",
-    "pug": "2.0.0-rc.1"
+    "imagesloaded": "4.1.2",
+    "jquery": "3.2.1",
+    "jquery-bridget": "2.0.1",
+    "masonry-layout": "4.2.0",
+    "pug": "2.0.0-rc.1",
+    "ramda": "0.24.1",
+    "validate.js": "0.11.1"
   }
 }

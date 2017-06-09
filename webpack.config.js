@@ -19,7 +19,8 @@ const styles = {
 
 const config = {
   entry: {
-    app: ['./public/js/index.js', './public/sass/main.scss']
+    app: ['./public/js/main.js', './public/sass/main.scss'],
+    vendor: ['jquery', 'ramda']
   },
 
   devtool: 'source-map',
