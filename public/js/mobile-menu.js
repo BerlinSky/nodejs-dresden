@@ -2,19 +2,25 @@ import $ from 'jquery';
 
 export function initMobileMenu() {
 
-console.log('initMobileMenu');
+  // $('.js-toggleMobileMenu').click(function(e) {
+  //   e.preventDefault();
+
+  //   const mobileMenu = $('.js-mobileMenuContainer');
+  //   mobileMenu.toggleClass("js-l-mobile");
+  // })
+
 
   $('.js-toggleMobileMenu').click(function(e) {
     e.preventDefault();
 
     const mobileMenu = $('.js-mobileMenuContainer');
 
-    console.log('mobileMenu', mobileMenu);
+    console.log('mobileMenu 2', mobileMenu);
 
-    mobileMenu.add("js-l-mobile");
+    mobileMenu.toggleClass("js-l-mobile");
   })
 
-  const menuWrapper = document.querySelector('.js-menuWrapper');
+  // const menuWrapper = document.querySelector('.js-menuWrapper');
 
 }
 

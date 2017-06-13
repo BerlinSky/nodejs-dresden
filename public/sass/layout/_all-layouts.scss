@@ -68,6 +68,14 @@
 
         margin: 0;
       }
+
+      .l-menuContainer.js-l-mobile {
+        display: none;
+
+        @include break(md) {
+          display: block;
+        }
+      }
     }
 
 	}
