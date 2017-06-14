@@ -2,26 +2,86 @@
 	height: 100vh;
 	display: flex;
 
-
   flex-wrap: wrap;
 	flex-direction: row;
   align-content: space-between;
 
 	.l-pageHeader {
+    border: solid 2px tomato;
+
     flex-grow: 1;
     flex-basis: 100%;
 
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: stretch;
 
+    .l-utilNavContainer {
+      border: solid 2px greenyellow;
+
+      height: 90px;
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .l-utilityMenuPanel {
+        background-color: lightblue;
+
+        display: none;
+        @include break(md) {
+          display: block;
+        }
+      }
+
+      .l-socialNetworkPanel {
+        background-color: lightcoral;
+      }
+    }
+
+    .l-siteNavContainer  {
+      border: solid 2px blueviolet;
+
+      height: 90px;
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .l-hamburgerPanel {
+        background-color: lightcoral;
+
+        display: block;
+        @include break(md) {
+          display: none;
+        }
+      }
+
+      .l-siteLogoPanel {
+        background-color: lightblue;
+      }
+
+      .l-siteMenuPanel {
+        background-color: lightcoral;
+
+        display: none;
+        @include break(md) {
+          display: block;
+        }
+      }
+    }
+
 		@include break(md) {
-      flex-direction: row;
+      // flex-direction: row;
 			justify-content: space-between;
 		}
 
     .l-navContainer {
+      border: solid 2px greenyellow;
+
       display: flex;
       justify-content: space-between;
       align-items: center;

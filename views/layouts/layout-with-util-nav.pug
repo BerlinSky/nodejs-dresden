@@ -1,0 +1,21 @@
+extends ../includes/base
+
+block pageTitle
+  block pageTitle
+
+block bodyContent
+  .l-pageContainer.pageContainer
+    .l-pageHeader.pageHeader
+      include ../components/navigation/utility-nav-bar
+      include ../components/navigation/site-nav-bar
+      //- h2(style="width: 100%; display: block") Utility Nav goes here
+      //- include ../components/navigation/site-nav-bar
+      //- include ../components/navigation/site-menu-bar
+
+    .l-pageContentWrapper.pageContentWrapper
+
+      block pageContent
+
+      include ../components/footer/default-footer
+
+//-     include ../includes/scripts

@@ -1,9 +1,48 @@
-doctype html
-html(lang='eng')
-  head
-    title Home Page
-    link(rel="shortcut icon" href="/images/favicon.png")
-    link(rel="stylesheet" href="/styles/app.css")
+extends layouts/layout-with-util-nav
 
-  body
-    h2 Landing page ...
+block pageTitle
+  title Landing 
+
+block pageContent
+
+  .l-contentContainer.contentContainer.contentContainer--newsContent
+    .newHeaderPanel
+      h2 News
+      .divider.divider--solid
+
+    .tourNewsPanel
+      .tourNewsBox
+        h3 Tour Dates
+        h4 Upcoming Tour Dates
+        .imageFrame
+          img(alt='img' src='./images/header-border.png').imageResponsive
+        .tourDateAndVenue
+          .tourDate
+            .tourMonth Apr
+            .tourDay 06
+          .tourLocation
+            .tourLocation__city St. Louis, MO
+            .tourLocation__name The Pageant
+        a.siteButton.siteButton--default(href="/tour") More &gt;&gt;
+
+    .otherNewsPanel
+      h3 Other News
+      .divider.divider--solid
+      
+      .newsList
+        .newsListItem
+          a(href="/news?title=chanterelle") A Room of One's Own
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
+        .newsListItem
+          a(href="/news?title=chanterelle") Chanterelle
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
+        .newsListItem
+          a(href="/news?title=chanterelle") A Room of One's Own
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
+        .newsListItem
+          a(href="/news?title=chanterelle") Chanterelle
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, quod doloribus dolorum asperiores ipsa labore aliquam officiis et autem saepe.
+
