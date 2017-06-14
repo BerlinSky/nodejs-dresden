@@ -24,13 +24,18 @@
       width: 100%;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+
+      justify-content: space-around;
+      @include break(md) {
+        justify-content: space-between;
+      }
 
       .l-utilityMenuPanel {
         background-color: lightblue;
 
         display: none;
+
         @include break(md) {
           display: block;
         }
