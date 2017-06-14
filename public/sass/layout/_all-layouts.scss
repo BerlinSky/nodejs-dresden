@@ -43,6 +43,17 @@
 
       .l-socialNetworkPanel {
         background-color: lightcoral;
+
+        flex-basis: 80%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a.socialLink {
+          color: #fff;
+          text-decoration: none;
+        }
       }
     }
 
